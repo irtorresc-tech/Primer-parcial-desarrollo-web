@@ -1,0 +1,62 @@
+body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* barra */
+.navbar{
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    background:#333;
+    padding:15px;
+    color:white;
+}
+
+/* logo */
+.logo{
+    font-size:20px;
+}
+
+/* menú */
+.menu{
+    list-style:none;
+    display:flex;
+    gap:20px;
+}
+
+.menu a{
+    color:white;
+    text-decoration:none;
+}
+
+/* botón hamburguesa */
+.menu-toggle{
+    display:none;
+    font-size:28px;
+    cursor:pointer;
+}
+
+/* responsive */
+@media (max-width:768px){
+
+.menu{
+    display:none;
+    flex-direction:column;
+    background:#333;
+    position:absolute;
+    top:60px;
+    right:0;
+    width:200px;
+    padding:20px;
+}
+
+.menu.active{
+    display:flex;
+}
+
+.menu-toggle{
+    display:block;
+}
+
+}

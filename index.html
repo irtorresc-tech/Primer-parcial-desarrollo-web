@@ -1,22 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La villa</title>
+    <title>Restaurante</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="components/sidebar/sidebar.css">
 </head>
 
 <body>
-    <h1>La villa</h1>
-    <p>un rincon rodeado de naturaleza, tradicion y belleza local.
-        Donde cada visita se siente como volver a casa</p>
+
+    <div id="header"></div>
+
+    <div class="layout">
+
+        <div id="sidebar"></div>
+
+        <main class="contenido">
+            <h1>Bienvenido al restaurante</h1>
+            <p>Aquí va el contenido principal.</p>
+        </main>
+        <img src="images/IMG_7187.png" alt="">
+        <section class="productos">
 
 
+        </section>
 
 
-<script src="script.js"></script>
+    </div>
+    <section class="productos">
+
+        <h2>Nuestros platos destacados</h2>
+
+        <div id="productos-container" class="productos-container"></div>
+
+    </section>
+
+    <template id="producto-template">
+
+<div class="producto">
+
+<img class="producto-img" src="" alt="producto">
+
+<h3 class="nombre"></h3>
+
+<p class="descripcion"></p>
+
+<span class="precio"></span>
+
+</div>
+
+</template>
+
+    <div id="footer"></div>
+
+    <script src="js/main.js"></script>
 
 </body>
 
