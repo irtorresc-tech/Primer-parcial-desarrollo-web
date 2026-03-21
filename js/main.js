@@ -1,52 +1,53 @@
-fetch("components/header/header.html")
-.then(res => res.text())
-.then(data => document.getElementById("header").innerHTML = data);
-
-fetch("components/sidebar/sidebar.html")
-.then(res => res.text())
-.then(data => document.getElementById("sidebar").innerHTML = data);
-
-fetch("components/footer/footer.html")
-.then(res => res.text())
-.then(data => document.getElementById("footer").innerHTML = data);
-
 document.addEventListener("DOMContentLoaded", () => {
 
-const productos = [
-{
-nombre: "Picada las Marias",
-descripcion: "Tiene Carnes, mazorca, papas",
-precio: "$80000",
-imagen: "images/picada.jpeg"
-},
-{
-nombre: "Chuleta Ahumada",
-descripcion: "Acompañada de arroz, ensalada y papas",
-precio: "$23000",
-imagen: "images/chuleta.jpeg"
-},
-{
-nombre: "Pechuga Ranchera",
-descripcion: "Pechuga bañada en queso, jamón y maiz, acompañada de arroz y papas",
-precio: "$30000",
-imagen: "images/pechuga.jpeg"
-}
-];
+    fetch("components/header/header.html")
+    .then(res => res.text())
+    .then(data => document.getElementById("header").innerHTML = data);
 
-const container = document.getElementById("productos-container");
-const template = document.getElementById("producto-template");
+    fetch("components/sidebar/sidebar.html")
+    .then(res => res.text())
+    .then(data => document.getElementById("sidebar").innerHTML = data);
 
-productos.forEach(producto => {
+    fetch("components/footer/footer.html")
+    .then(res => res.text())
+    .then(data => document.getElementById("footer").innerHTML = data);
 
-const clon = template.content.cloneNode(true);
 
-clon.querySelector(".nombre").textContent = producto.nombre;
-clon.querySelector(".descripcion").textContent = producto.descripcion;
-clon.querySelector(".precio").textContent = producto.precio;
-clon.querySelector(".producto-img").src = producto.imagen;
+    // template y json
+    const template = document.getElementById("producto-template");
+    const container = document.getElementById("productos-container");
 
-container.appendChild(clon);
+    fetch("data/productos.json")
+    .then(res => res.json())
+    .then(productos => {
 
-});
+        productos.forEach(producto => {
+
+            const clon = template.content.cloneNode(true);
+
+            clon.querySelector(".nombre").textContent = producto.nombre;
+            clon.querySelector(".descripcion").textContent = producto.descripcion;
+            clon.querySelector(".precio").textContent = producto.precio;
+            clon.querySelector(".producto-img").src = producto.imagen;
+
+            container.appendChild(clon);
+        });
+
+    })
+    .catch(error => console.error("Error:", error));
+
+
+    // menu
+    document.addEventListener("click", (e) => {
+
+        if(e.target.id === "menu-toggle-header"){
+            document.getElementById("menu-header").classList.toggle("active");
+        }
+
+        if(e.target.id === "menu-toggle-sidebar"){
+            document.getElementById("menu-sidebar").classList.toggle("active");
+        }
+
+    });
 
 });
