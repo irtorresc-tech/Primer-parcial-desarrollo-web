@@ -80,8 +80,6 @@ Se aplicaron estilos consistentes en toda la aplicación, manteniendo:
 
 ##  Buenas prácticas aplicadas
 
-* Uso de **camelCase** en JavaScript
-* Uso de **kebab-case** en CSS
 * Código organizado y correctamente indentado
 * Separación de responsabilidades en distintos archivos:
 
@@ -103,7 +101,6 @@ El desarrollo del proyecto fue gestionado mediante GitHub, utilizando repositori
 * ✔ Componentes dinámicos (header, sidebar, footer)
 * ✔ Carga de productos desde JSON
 * ✔ Renderizado dinámico de productos
-* ✔ Uso de Web Components
 * ✔ Diseño responsive básico
 
 ---
@@ -123,7 +120,6 @@ Durante la sustentación se demostrará:
 
 El proyecto se desarrolló en equipo utilizando:
 
-- Creación de ramas (branches)
 - Commits constantes
 - Pull Requests para integrar cambios
 
@@ -132,5 +128,5 @@ Esto permitió una mejor organización del trabajo y control de versiones.
 ##  Autor
 
 Proyecto desarrollado por:
-**Iván René Torres Coronel**
-**Julieta**
+**Iván René Torres Coronel - 192668**
+**Julieta Ropero Velazques - 192639**
