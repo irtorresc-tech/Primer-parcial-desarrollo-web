@@ -129,4 +129,4 @@ Esto permitió una mejor organización del trabajo y control de versiones.
 
 Proyecto desarrollado por:
 **Iván René Torres Coronel - 192668**
-**Julieta Ropero Velazques - 192639**
+**Julieta Ropero Velásquez - 192639**
