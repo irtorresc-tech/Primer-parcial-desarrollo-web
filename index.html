@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
-
+<head>
+    <script>
+        
+        if (localStorage.getItem("auth") !== "true") {
+            
+            window.location.href = "login.html";
+        }
+    </script>
+    </head>
 <head>
     <meta charset="UTF-8">
     <title>Restaurante</title>
