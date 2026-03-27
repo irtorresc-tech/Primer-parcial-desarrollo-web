@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+    
 
     fetch("components/header/header.html")
     .then(res => res.text())
